@@ -5,9 +5,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 export type Task =
 	| "RETRIEVAL_DOCUMENT"
 	| "RETRIEVAL_QUERY"
-	| "SEMANTIC_SIMILARITY"
-	| "CLASSIFICATION"
-	| "CLUSTERING";
+	| "SEMANTIC_SIMILARITY";
 
 export async function embedTexts(
 	texts: string[],

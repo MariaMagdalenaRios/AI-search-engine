@@ -13,7 +13,7 @@ async function main() {
 		apiKey: process.env.GEMINI_API_KEY,
 	});
 	const config = {
-		temperature: 0, //0 = deterministic, 2 = random, 1 = default
+		temperature: 1, //0 = deterministic, 2 = random, 1 = default
 		thinkingConfig: {
 			thinkingBudget: 0,
 		},
@@ -29,29 +29,29 @@ async function main() {
 			role: "user",
 			parts: [
 				{
-					text: `What is the capital of France?`,
+					text: `What is the capital of France? Write a short essay about it.`,
 				},
 			],
 		},
 	];
 
 	//Streaaming response
-	const response = await ai.models.generateContentStream({
+	/* const response = await ai.models.generateContentStream({
 		model,
 		config,
 		contents,
 	});
 	for await (const chunk of response) {
-		console.log(chunk.text);
-	}
+		console.log("Chunk of response is:", chunk.text);
+	} */
 
 	//Non-streaming response
-	/* const responseNonStreaming = await ai.models.generateContent({
+	const responseNonStreaming = await ai.models.generateContent({
 		model,
 		config,
 		contents,
 	});
-	console.log(responseNonStreaming.text); */
+	console.log(responseNonStreaming.text);
 }
 
 main();

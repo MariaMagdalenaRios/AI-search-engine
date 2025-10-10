@@ -2,7 +2,7 @@ import "dotenv/config";
 import { embedTexts } from "./embed";
 import { supabase } from "./supabase";
 
-export async function search(query: string, k = 15) {
+export async function search(query: string, k = 3) {
 	// Använd retrieval query här
 	const [qVec] = await embedTexts([query], {
 		taskType: "RETRIEVAL_QUERY",
