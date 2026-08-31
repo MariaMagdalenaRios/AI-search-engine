@@ -1,0 +1,737 @@
+[
+  {
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Sci-Fi, Thriller",
+    "runtime": 148,
+    "overview": "A skilled thief who steals secrets from inside people's dreams is offered one last job: plant an idea in a target's mind. A cerebral, layered heist that keeps folding in on itself, driven by grief over a wife he could not save."
+  },
+  {
+    "title": "The Matrix",
+    "year": 1999,
+    "genre": "Sci-Fi, Action",
+    "runtime": 136,
+    "overview": "A restless computer hacker learns that reality is a simulation built by machines to farm human bodies. Stylish, paranoid, and philosophical, with bullet-time gunfights and a messiah story underneath."
+  },
+  {
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Sci-Fi, Drama",
+    "runtime": 169,
+    "overview": "On a dying Earth, a widowed pilot leaves his children to fly through a wormhole in search of a new home for humanity. Vast and cold in scale but devastatingly emotional, centred on a father missing his daughter's whole life."
+  },
+  {
+    "title": "Arrival",
+    "year": 2016,
+    "genre": "Sci-Fi, Drama, Mystery",
+    "runtime": 116,
+    "overview": "A linguist is recruited to talk to aliens hovering over Earth, and discovers their language rewires how she experiences time. Quiet, melancholy science fiction about grief, choice, and loving someone you know you will lose."
+  },
+  {
+    "title": "Blade Runner 2049",
+    "year": 2017,
+    "genre": "Sci-Fi, Mystery, Drama",
+    "runtime": 164,
+    "overview": "A replicant hunter uncovers a secret that could unravel the fragile order between humans and synthetics. Slow, gorgeous, and deeply lonely, asking what makes a life real."
+  },
+  {
+    "title": "Her",
+    "year": 2013,
+    "genre": "Romance, Sci-Fi, Drama",
+    "runtime": 126,
+    "overview": "A lonely, recently divorced writer falls in love with an AI operating system that grows beyond him. Tender, warm, and quietly heartbreaking, about intimacy and being left behind."
+  },
+  {
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "year": 2004,
+    "genre": "Romance, Sci-Fi, Drama",
+    "runtime": 108,
+    "overview": "After a bitter breakup, a couple pay to have each other erased from their memories, then fight to hold on as the memories dissolve. Messy, funny, and profoundly sad about why we love people who hurt us."
+  },
+  {
+    "title": "Dune",
+    "year": 2021,
+    "genre": "Sci-Fi, Adventure",
+    "runtime": 155,
+    "overview": "A young heir travels to a lethal desert planet holding the most valuable substance in the universe, and steps into a prophecy he never asked for. Epic, solemn, and enormous in scope."
+  },
+  {
+    "title": "Ex Machina",
+    "year": 2014,
+    "genre": "Sci-Fi, Thriller",
+    "runtime": 108,
+    "overview": "A programmer is invited to test whether a beautiful humanoid robot is truly conscious, and becomes a pawn in a colder game. Claustrophobic, tense, and unnerving with only three people in a glass house."
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "genre": "Sci-Fi, Comedy, Drama",
+    "runtime": 139,
+    "overview": "An exhausted laundromat owner drowning in tax audits discovers she must save the multiverse. Absurd, chaotic, and hilarious, then suddenly a gut-punch about a mother and daughter learning to be kind to each other."
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "year": 2014,
+    "genre": "Comedy, Drama, Adventure",
+    "runtime": 99,
+    "overview": "A legendary hotel concierge and his loyal lobby boy get tangled in a stolen painting and a family fortune. Whimsical, symmetrical, and fast-talking, with an unexpected ache of a lost world underneath the jokes."
+  },
+  {
+    "title": "Superbad",
+    "year": 2007,
+    "genre": "Comedy",
+    "runtime": 113,
+    "overview": "Two codependent best friends try to buy alcohol and lose their virginity before high school ends. Crude, loud, relentlessly quotable, and secretly a love story about male friendship."
+  },
+  {
+    "title": "Booksmart",
+    "year": 2019,
+    "genre": "Comedy",
+    "runtime": 102,
+    "overview": "Two overachieving best friends realise they studied through all of high school and cram four years of partying into one night. Warm, sharp, and genuinely funny about friendship growing apart."
+  },
+  {
+    "title": "Groundhog Day",
+    "year": 1993,
+    "genre": "Comedy, Romance, Fantasy",
+    "runtime": 101,
+    "overview": "A cynical weatherman is trapped repeating the same small-town day forever, until he stops being awful. Endlessly rewatchable, funny, and quietly moral about becoming a better person."
+  },
+  {
+    "title": "Bridesmaids",
+    "year": 2011,
+    "genre": "Comedy, Romance",
+    "runtime": 125,
+    "overview": "A woman whose life is falling apart competes to stay her best friend's favourite person through wedding season. Raucous and physical but rooted in real jealousy and loneliness."
+  },
+  {
+    "title": "Palm Springs",
+    "year": 2020,
+    "genre": "Comedy, Romance, Sci-Fi",
+    "runtime": 90,
+    "overview": "Two strangers get stuck reliving the same wedding day and slowly fall for each other. Light, breezy, and surprisingly thoughtful about commitment when nothing has consequences."
+  },
+  {
+    "title": "The Nice Guys",
+    "year": 2016,
+    "genre": "Comedy, Crime, Action",
+    "runtime": 116,
+    "overview": "A bumbling private eye and a hired thug reluctantly team up on a missing girl case in 1977 Los Angeles. Snappy, violent, and very funny neo-noir."
+  },
+  {
+    "title": "School of Rock",
+    "year": 2003,
+    "genre": "Comedy, Music",
+    "runtime": 109,
+    "overview": "A failed rock guitarist fakes his way into substitute teaching and turns a class of prep school kids into a band. Joyful, silly, and warm-hearted crowd-pleaser."
+  },
+  {
+    "title": "What We Do in the Shadows",
+    "year": 2014,
+    "genre": "Comedy, Horror",
+    "runtime": 86,
+    "overview": "A documentary crew follows four vampire flatmates bickering about chores and nightlife in Wellington. Deadpan, absurd, and endlessly charming."
+  },
+  {
+    "title": "Paddington 2",
+    "year": 2017,
+    "genre": "Comedy, Family, Adventure",
+    "runtime": 103,
+    "overview": "A polite young bear is framed for theft and sent to prison, where he wins over the inmates with marmalade. Ridiculously wholesome, funny, and gently emotional for all ages."
+  },
+  {
+    "title": "La La Land",
+    "year": 2016,
+    "genre": "Romance, Musical, Drama",
+    "runtime": 128,
+    "overview": "An aspiring actress and a stubborn jazz pianist fall in love in Los Angeles while their ambitions pull them apart. Sweeping, colourful, joyful, and then quietly devastating."
+  },
+  {
+    "title": "Before Sunrise",
+    "year": 1995,
+    "genre": "Romance, Drama",
+    "runtime": 101,
+    "overview": "Two strangers meet on a train and spend one night walking through Vienna talking about everything. Almost nothing happens, and it is one of the most romantic films ever made."
+  },
+  {
+    "title": "Pride & Prejudice",
+    "year": 2005,
+    "genre": "Romance, Drama",
+    "runtime": 129,
+    "overview": "A sharp-tongued young woman and a proud, awkward gentleman misjudge each other for most of a courtship. Lush, longing, and full of restrained yearning in the English countryside."
+  },
+  {
+    "title": "Amélie",
+    "year": 2001,
+    "genre": "Romance, Comedy",
+    "runtime": 122,
+    "overview": "A shy Parisian waitress secretly arranges small miracles in other people's lives while avoiding her own. Quirky, saturated, whimsical, and sweet."
+  },
+  {
+    "title": "Notting Hill",
+    "year": 1999,
+    "genre": "Romance, Comedy",
+    "runtime": 124,
+    "overview": "A modest London bookshop owner accidentally starts dating the most famous actress in the world. Charming, gentle, and comforting classic romantic comedy."
+  },
+  {
+    "title": "Call Me by Your Name",
+    "year": 2017,
+    "genre": "Romance, Drama",
+    "runtime": 132,
+    "overview": "A teenager and his father's older research assistant fall into a summer romance in northern Italy. Languid, sun-drenched, sensual, and quietly shattering by the final shot."
+  },
+  {
+    "title": "Past Lives",
+    "year": 2023,
+    "genre": "Romance, Drama",
+    "runtime": 105,
+    "overview": "Two childhood friends separated by emigration reunite in New York twenty years later, both changed. Restrained, aching, and devastatingly gentle about the lives you did not live."
+  },
+  {
+    "title": "The Big Sick",
+    "year": 2017,
+    "genre": "Romance, Comedy, Drama",
+    "runtime": 120,
+    "overview": "A Pakistani-American comedian falls for a woman who then slips into a coma, leaving him with her parents. Genuinely funny and genuinely moving at the same time."
+  },
+  {
+    "title": "10 Things I Hate About You",
+    "year": 1999,
+    "genre": "Romance, Comedy",
+    "runtime": 97,
+    "overview": "A boy is paid to date the school's fiercest outcast so her sister can go out too. Witty, warm teen romance with real bite."
+  },
+  {
+    "title": "In the Mood for Love",
+    "year": 2000,
+    "genre": "Romance, Drama",
+    "runtime": 98,
+    "overview": "Two neighbours discover their spouses are having an affair with each other, and fall into an unspoken love of their own. Exquisitely restrained, gorgeous, and full of longing never acted upon."
+  },
+  {
+    "title": "The Godfather",
+    "year": 1972,
+    "genre": "Crime, Drama",
+    "runtime": 175,
+    "overview": "An ageing mafia patriarch hands his empire to the son who wanted no part of it. Stately, patient, and tragic about family loyalty corroding a good man."
+  },
+  {
+    "title": "Goodfellas",
+    "year": 1990,
+    "genre": "Crime, Drama",
+    "runtime": 146,
+    "overview": "A working-class kid rises through the mob and burns everything down with cocaine and paranoia. Kinetic, funny, and terrifying, narrated at breakneck speed."
+  },
+  {
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "genre": "Crime, Drama",
+    "runtime": 154,
+    "overview": "Hitmen, a boxer, a gangster's wife, and two diner robbers collide across a shuffled timeline. Cool, talky, violent, and endlessly imitated."
+  },
+  {
+    "title": "No Country for Old Men",
+    "year": 2007,
+    "genre": "Thriller, Crime",
+    "runtime": 122,
+    "overview": "A welder takes a case of drug money and is hunted across Texas by an implacable killer with a cattle gun. Bone-dry, nearly silent, and pitilessly tense."
+  },
+  {
+    "title": "Se7en",
+    "year": 1995,
+    "genre": "Thriller, Crime, Mystery",
+    "runtime": 127,
+    "overview": "Two detectives track a killer staging murders around the seven deadly sins. Grimy, rain-soaked, and nihilistically bleak with an ending that never leaves you."
+  },
+  {
+    "title": "Prisoners",
+    "year": 2013,
+    "genre": "Thriller, Crime, Drama",
+    "runtime": 153,
+    "overview": "When two girls vanish, a desperate father takes the investigation into his own hands. Heavy, grim, and morally suffocating."
+  },
+  {
+    "title": "Gone Girl",
+    "year": 2014,
+    "genre": "Thriller, Mystery, Drama",
+    "runtime": 149,
+    "overview": "A woman disappears and her husband becomes the prime suspect in a media circus. Cold, sharp, and viciously funny about marriage as performance."
+  },
+  {
+    "title": "Zodiac",
+    "year": 2007,
+    "genre": "Thriller, Mystery, Crime",
+    "runtime": 157,
+    "overview": "Journalists and detectives spend decades failing to catch a serial killer. Meticulous, obsessive, and quietly maddening about the cost of not knowing."
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "genre": "Thriller, Horror, Crime",
+    "runtime": 118,
+    "overview": "A young FBI trainee bargains with an imprisoned cannibal to catch another killer. Intimate, skin-crawling, and anchored by two extraordinary performances."
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "genre": "Thriller, Drama, Comedy",
+    "runtime": 132,
+    "overview": "A poor family cons their way into working for a rich one, until the basement gives up its secret. Wickedly funny, then brutal, about class contempt."
+  },
+  {
+    "title": "Nightcrawler",
+    "year": 2014,
+    "genre": "Thriller, Crime, Drama",
+    "runtime": 117,
+    "overview": "A hollow young man films crime scenes for local news and starts staging them. Sleek, nocturnal, and deeply unsettling."
+  },
+  {
+    "title": "Get Out",
+    "year": 2017,
+    "genre": "Horror, Thriller, Mystery",
+    "runtime": 104,
+    "overview": "A Black photographer visits his white girlfriend's family estate and finds a horror underneath their liberal politeness. Razor-sharp, funny, and genuinely frightening satire."
+  },
+  {
+    "title": "Hereditary",
+    "year": 2018,
+    "genre": "Horror, Drama, Mystery",
+    "runtime": 127,
+    "overview": "A family unravels after a death, pursued by something inherited through the bloodline. Grief-soaked, dread-heavy, and traumatising."
+  },
+  {
+    "title": "The Shining",
+    "year": 1980,
+    "genre": "Horror, Drama",
+    "runtime": 146,
+    "overview": "A writer takes a winter caretaking job at an empty mountain hotel and comes apart. Cold, geometric, and endlessly unnerving."
+  },
+  {
+    "title": "Psycho",
+    "year": 1960,
+    "genre": "Horror, Thriller, Mystery",
+    "runtime": 109,
+    "overview": "A woman on the run stops at a lonely motel run by a nervous young man and his mother. The blueprint for the modern thriller, still shocking."
+  },
+  {
+    "title": "A Quiet Place",
+    "year": 2018,
+    "genre": "Horror, Thriller, Sci-Fi",
+    "runtime": 90,
+    "overview": "A family survives in near-total silence because sound attracts lethal creatures. Lean, nerve-shredding, and surprisingly moving about protecting your children."
+  },
+  {
+    "title": "The Babadook",
+    "year": 2014,
+    "genre": "Horror, Drama",
+    "runtime": 94,
+    "overview": "An exhausted widow and her difficult son are stalked by a creature from a children's book. A genuinely frightening film about the ugly side of grief and motherhood."
+  },
+  {
+    "title": "It Follows",
+    "year": 2014,
+    "genre": "Horror, Thriller",
+    "runtime": 100,
+    "overview": "A teenager is pursued relentlessly by something only she can see, passed on like an infection. Dreamlike, synth-scored, and creeping with dread."
+  },
+  {
+    "title": "Alien",
+    "year": 1979,
+    "genre": "Horror, Sci-Fi, Thriller",
+    "runtime": 117,
+    "overview": "A commercial towing crew picks up an organism that begins hunting them through the ship. Grimy, claustrophobic, and perfectly paced."
+  },
+  {
+    "title": "Spirited Away",
+    "year": 2001,
+    "genre": "Animation, Fantasy, Adventure",
+    "runtime": 125,
+    "overview": "A sulky girl stumbles into a spirit bathhouse where her parents have been turned into pigs. Dazzling, strange, and gently wise about growing up."
+  },
+  {
+    "title": "My Neighbor Totoro",
+    "year": 1988,
+    "genre": "Animation, Family, Fantasy",
+    "runtime": 86,
+    "overview": "Two sisters move to the countryside while their mother is ill and befriend a giant forest spirit. Almost plotless, deeply calming, and quietly about childhood fear."
+  },
+  {
+    "title": "Spider-Man: Into the Spider-Verse",
+    "year": 2018,
+    "genre": "Animation, Action, Adventure",
+    "runtime": 117,
+    "overview": "A Brooklyn teenager becomes Spider-Man and meets versions of himself from other dimensions. Visually explosive, funny, and genuinely emotional about self-belief."
+  },
+  {
+    "title": "Toy Story",
+    "year": 1995,
+    "genre": "Animation, Family, Comedy",
+    "runtime": 81,
+    "overview": "A cowboy doll is threatened by a flashy new spaceman toy and the two get lost together. Funny, inventive, and warm about jealousy and friendship."
+  },
+  {
+    "title": "Inside Out",
+    "year": 2015,
+    "genre": "Animation, Family, Drama",
+    "runtime": 95,
+    "overview": "The emotions inside an eleven-year-old girl struggle as her family moves cities. Clever, colourful, and quietly profound about the necessity of sadness."
+  },
+  {
+    "title": "The Lion King",
+    "year": 1994,
+    "genre": "Animation, Family, Drama",
+    "runtime": 88,
+    "overview": "A lion cub flees after his uncle murders his father, and must return to claim his place. Grand, tragic, and full of unforgettable songs."
+  },
+  {
+    "title": "WALL-E",
+    "year": 2008,
+    "genre": "Animation, Family, Sci-Fi",
+    "runtime": 98,
+    "overview": "A lonely cleanup robot on an abandoned Earth falls for a sleek probe and follows her into space. Nearly wordless for a third of its length, and enormously touching."
+  },
+  {
+    "title": "Coco",
+    "year": 2017,
+    "genre": "Animation, Family, Fantasy",
+    "runtime": 105,
+    "overview": "A boy who loves music is pulled into the Land of the Dead on Día de Muertos. Vibrant, musical, and openly tear-jerking about family memory."
+  },
+  {
+    "title": "Klaus",
+    "year": 2019,
+    "genre": "Animation, Family, Comedy",
+    "runtime": 96,
+    "overview": "A selfish postman posted to a feuding frozen town accidentally invents Santa Claus. Beautifully drawn, funny, and unexpectedly emotional."
+  },
+  {
+    "title": "Grave of the Fireflies",
+    "year": 1988,
+    "genre": "Animation, Drama, War",
+    "runtime": 89,
+    "overview": "A teenage boy tries to keep his little sister alive in the last months of the war in Japan. One of the saddest films ever made, and unflinching."
+  },
+  {
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genre": "Action, Crime, Drama",
+    "runtime": 152,
+    "overview": "Batman faces an anarchist clown who wants to prove that anyone can be broken. Grand, grim, and morally serious blockbuster filmmaking."
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "genre": "Action, Adventure, Sci-Fi",
+    "runtime": 120,
+    "overview": "In a scorched wasteland, a driver and a rebel commander flee a warlord across the desert. Almost pure chase, deafening, practical, and exhilarating."
+  },
+  {
+    "title": "Die Hard",
+    "year": 1988,
+    "genre": "Action, Thriller",
+    "runtime": 132,
+    "overview": "An off-duty cop is trapped in a skyscraper seized by thieves posing as terrorists. Tight, funny, and the template every action film copied."
+  },
+  {
+    "title": "John Wick",
+    "year": 2014,
+    "genre": "Action, Thriller, Crime",
+    "runtime": 101,
+    "overview": "A retired assassin returns to violence after gangsters kill the dog his dying wife gave him. Stylish, brutally choreographed, and oddly mournful."
+  },
+  {
+    "title": "Raiders of the Lost Ark",
+    "year": 1981,
+    "genre": "Adventure, Action",
+    "runtime": 115,
+    "overview": "An archaeologist races Nazis for a biblical relic that makes armies invincible. Pure adventure, breezy and perfectly constructed."
+  },
+  {
+    "title": "Mission: Impossible - Fallout",
+    "year": 2018,
+    "genre": "Action, Thriller, Adventure",
+    "runtime": 147,
+    "overview": "A spy team chases stolen plutonium through Paris, London, and Kashmir. Relentlessly escalating practical stunt work with genuine tension."
+  },
+  {
+    "title": "The Raid",
+    "year": 2011,
+    "genre": "Action, Thriller, Crime",
+    "runtime": 101,
+    "overview": "A SWAT team is trapped inside a tower block controlled by a drug lord. Ferocious, exhausting, near-nonstop martial arts violence."
+  },
+  {
+    "title": "Top Gun: Maverick",
+    "year": 2022,
+    "genre": "Action, Drama",
+    "runtime": 130,
+    "overview": "An ageing test pilot trains a squad for a near-impossible mission, including his dead friend's son. Rousing, sincere, and thrillingly analogue."
+  },
+  {
+    "title": "Casino Royale",
+    "year": 2006,
+    "genre": "Action, Thriller, Adventure",
+    "runtime": 144,
+    "overview": "A newly promoted Bond plays a high-stakes poker game against a terrorist banker, and falls in love. Bruising, elegant, and unexpectedly romantic."
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "genre": "Fantasy, Adventure, Action",
+    "runtime": 178,
+    "overview": "A hobbit inherits a ring of terrible power and sets out with eight companions to destroy it. Sweeping, sincere, and full of wonder and dread."
+  },
+  {
+    "title": "Pan's Labyrinth",
+    "year": 2006,
+    "genre": "Fantasy, Drama, War",
+    "runtime": 118,
+    "overview": "A girl in fascist Spain escapes her brutal stepfather into a dark fairy tale with three deadly tasks. Beautiful, cruel, and heartbreaking."
+  },
+  {
+    "title": "The Princess Bride",
+    "year": 1987,
+    "genre": "Fantasy, Romance, Comedy, Adventure",
+    "runtime": 98,
+    "overview": "A farm boy turned pirate crosses a kingdom to rescue his true love. Endlessly quotable, sweet, and gently mocking of its own fairy tale."
+  },
+  {
+    "title": "Crouching Tiger, Hidden Dragon",
+    "year": 2000,
+    "genre": "Fantasy, Action, Romance, Drama",
+    "runtime": 120,
+    "overview": "Two master warriors chase a stolen sword and suppress a love neither will admit. Gravity-defying, elegiac, and quietly sad."
+  },
+  {
+    "title": "Big Fish",
+    "year": 2003,
+    "genre": "Fantasy, Drama, Adventure",
+    "runtime": 125,
+    "overview": "A dying man's tall tales are sifted by his estranged son for a grain of truth. Whimsical, colourful, and a reliable tearjerker about fathers."
+  },
+  {
+    "title": "Howl's Moving Castle",
+    "year": 2004,
+    "genre": "Fantasy, Animation, Adventure",
+    "runtime": 119,
+    "overview": "A young hatmaker cursed into an old woman's body takes refuge with a vain wizard. Dreamy, cluttered with invention, and warm."
+  },
+  {
+    "title": "The Shape of Water",
+    "year": 2017,
+    "genre": "Fantasy, Romance, Drama",
+    "runtime": 123,
+    "overview": "A mute cleaner at a secret facility falls in love with the amphibian creature held there. Tactile, tender, and unapologetically strange."
+  },
+  {
+    "title": "Stardust",
+    "year": 2007,
+    "genre": "Fantasy, Romance, Adventure, Comedy",
+    "runtime": 127,
+    "overview": "A shop boy crosses a magic wall to fetch a fallen star and finds she is a woman. Playful, romantic, and cheerfully silly."
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "genre": "Drama",
+    "runtime": 142,
+    "overview": "A banker sentenced for a murder he did not commit builds a quiet life and a long plan inside prison. Patient, warm, and overwhelmingly hopeful."
+  },
+  {
+    "title": "Forrest Gump",
+    "year": 1994,
+    "genre": "Drama, Romance, Comedy",
+    "runtime": 142,
+    "overview": "A gentle man with a low IQ drifts through decades of American history while loving one woman. Sentimental, funny, and shamelessly moving."
+  },
+  {
+    "title": "Whiplash",
+    "year": 2014,
+    "genre": "Drama, Music",
+    "runtime": 106,
+    "overview": "A young drummer is pushed toward greatness by a conductor who humiliates and abuses him. Tight, percussive, and unbearably tense."
+  },
+  {
+    "title": "Moonlight",
+    "year": 2016,
+    "genre": "Drama",
+    "runtime": 111,
+    "overview": "A quiet boy in Miami grows into a hardened man across three chapters, carrying a tenderness he cannot speak. Hushed, beautiful, and devastating."
+  },
+  {
+    "title": "The Social Network",
+    "year": 2010,
+    "genre": "Drama, Biography",
+    "runtime": 120,
+    "overview": "A resentful Harvard student builds Facebook and sues his way through every friendship. Fast, cold, and brilliantly written."
+  },
+  {
+    "title": "There Will Be Blood",
+    "year": 2007,
+    "genre": "Drama",
+    "runtime": 158,
+    "overview": "An oil prospector claws an empire out of California and destroys everyone near him. Monumental, hostile, and hypnotic."
+  },
+  {
+    "title": "Manchester by the Sea",
+    "year": 2016,
+    "genre": "Drama",
+    "runtime": 137,
+    "overview": "A withdrawn janitor returns home to care for his nephew and confront an unbearable past. Bleak, occasionally very funny, and honest about grief that does not heal."
+  },
+  {
+    "title": "Little Women",
+    "year": 2019,
+    "genre": "Drama, Romance",
+    "runtime": 135,
+    "overview": "Four sisters in post-Civil War Massachusetts chase art, marriage, and independence. Bustling, warm, and quietly radical about a woman's choices."
+  },
+  {
+    "title": "Nomadland",
+    "year": 2020,
+    "genre": "Drama",
+    "runtime": 107,
+    "overview": "A widow who lost everything in the recession lives in a van and works seasonal jobs across the West. Spare, wandering, and deeply humane."
+  },
+  {
+    "title": "Lost in Translation",
+    "year": 2003,
+    "genre": "Drama, Romance, Comedy",
+    "runtime": 102,
+    "overview": "A fading actor and a neglected young wife drift together through sleepless Tokyo nights. Muted, funny, and beautifully unresolved."
+  },
+  {
+    "title": "12 Angry Men",
+    "year": 1957,
+    "genre": "Drama, Thriller",
+    "runtime": 96,
+    "overview": "One juror refuses to convict, and slowly dismantles eleven certainties in a sweltering room. Pure dialogue, gripping from the first minute."
+  },
+  {
+    "title": "Spotlight",
+    "year": 2015,
+    "genre": "Drama, Crime",
+    "runtime": 129,
+    "overview": "Boston Globe reporters uncover decades of abuse covered up by the Catholic Church. Understated, procedural, and quietly furious."
+  },
+  {
+    "title": "Whale Rider",
+    "year": 2002,
+    "genre": "Drama, Family",
+    "runtime": 101,
+    "overview": "A Māori girl fights her grandfather's belief that only a boy can lead their people. Small, dignified, and stirring."
+  },
+  {
+    "title": "Portrait of a Lady on Fire",
+    "year": 2019,
+    "genre": "Romance, Drama",
+    "runtime": 122,
+    "overview": "A painter is hired to secretly paint a reluctant bride, and the two fall in love in stolen time. Quiet, searing, and composed like a painting."
+  },
+  {
+    "title": "The Farewell",
+    "year": 2019,
+    "genre": "Drama, Comedy",
+    "runtime": 100,
+    "overview": "A Chinese-American woman returns to Changchun for a fake wedding staged so her grandmother never learns she is dying. Funny, awkward, and full of love."
+  },
+  {
+    "title": "Sing Street",
+    "year": 2016,
+    "genre": "Drama, Comedy, Music, Romance",
+    "runtime": 106,
+    "overview": "A Dublin teenager starts a band to impress a girl while his family falls apart. Buoyant, funny, and bittersweet with excellent songs."
+  },
+  {
+    "title": "Once",
+    "year": 2007,
+    "genre": "Romance, Drama, Music",
+    "runtime": 86,
+    "overview": "A Dublin busker and a Czech pianist record an album together and fall in love they cannot act on. Tiny, handmade, and gorgeous."
+  },
+  {
+    "title": "Almost Famous",
+    "year": 2000,
+    "genre": "Drama, Comedy, Music",
+    "runtime": 122,
+    "overview": "A fifteen-year-old writer tours with a rising rock band for Rolling Stone in 1973. Golden, funny, and generous to everyone in it."
+  },
+  {
+    "title": "Good Will Hunting",
+    "year": 1997,
+    "genre": "Drama, Romance",
+    "runtime": 126,
+    "overview": "A janitor with a genius for mathematics is pushed by a grieving therapist to stop sabotaging his life. Warm, talky, and cathartic."
+  },
+  {
+    "title": "Dead Poets Society",
+    "year": 1989,
+    "genre": "Drama",
+    "runtime": 128,
+    "overview": "An unorthodox English teacher wakes up a class of boys at a rigid boarding school. Stirring, romantic about literature, and finally tragic."
+  },
+  {
+    "title": "Coach Carter",
+    "year": 2005,
+    "genre": "Drama, Sport",
+    "runtime": 136,
+    "overview": "A basketball coach benches his undefeated team over failing grades. Rousing, earnest, and about more than winning."
+  },
+  {
+    "title": "Rocky",
+    "year": 1976,
+    "genre": "Drama, Sport, Romance",
+    "runtime": 120,
+    "overview": "A club fighter from Philadelphia gets one shot at the heavyweight champion and just wants to last. Scruffy, tender, and quietly about self-respect."
+  },
+  {
+    "title": "Slumdog Millionaire",
+    "year": 2008,
+    "genre": "Drama, Romance",
+    "runtime": 120,
+    "overview": "A Mumbai orphan on a quiz show explains each answer through the story of his brutal life and one love. Propulsive, harsh, and finally joyful."
+  },
+  {
+    "title": "About Time",
+    "year": 2013,
+    "genre": "Romance, Comedy, Fantasy, Drama",
+    "runtime": 123,
+    "overview": "A young man who can revisit his own past uses it to win love and then to sit with his father one more time. Cosy, funny, and a reliable sob."
+  },
+  {
+    "title": "Chef",
+    "year": 2014,
+    "genre": "Comedy, Drama",
+    "runtime": 114,
+    "overview": "A burnt-out chef quits, buys a food truck, and reconnects with his son on the road. Low-stakes, warm, delicious, and easy company."
+  },
+  {
+    "title": "Julie & Julia",
+    "year": 2009,
+    "genre": "Comedy, Drama, Romance",
+    "runtime": 123,
+    "overview": "A blogger cooks her way through Julia Child's cookbook while Child herself learns to cook in Paris. Gentle, appetising, and comforting."
+  },
+  {
+    "title": "The Intouchables",
+    "year": 2011,
+    "genre": "Comedy, Drama",
+    "runtime": 112,
+    "overview": "A quadriplegic aristocrat hires a young man from the projects as his carer. Funny, buoyant, and unabashedly feel-good."
+  },
+  {
+    "title": "Green Book",
+    "year": 2018,
+    "genre": "Drama, Comedy",
+    "runtime": 130,
+    "overview": "A Bronx bouncer drives a Black classical pianist through the segregated American South. Easy-going, funny, and warm-hearted road movie."
+  },
+  {
+    "title": "Hunt for the Wilderpeople",
+    "year": 2016,
+    "genre": "Comedy, Adventure, Drama",
+    "runtime": 101,
+    "overview": "A troubled foster kid and his gruff uncle go on the run through the New Zealand bush. Deadpan, funny, and surprisingly moving."
+  }
+]
