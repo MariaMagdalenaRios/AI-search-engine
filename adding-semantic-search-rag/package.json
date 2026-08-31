@@ -19,6 +19,7 @@
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
     "dev:api": "tsx src/server.ts",
-    "start:api": "node dist/server.js"
+    "start:api": "node dist/server.js",
+    "seed": "tsx seed.ts"
   }
 }
