@@ -12,6 +12,7 @@
     "@types/ws": "^8.18.1"
   },
   "scripts": {
-    "seed": "tsx src/seed.ts"
+    "seed": "tsx src/seed.ts",
+    "seed:generate": "tsx src/seed.ts --generate"
   }
 }
