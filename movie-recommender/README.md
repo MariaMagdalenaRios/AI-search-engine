@@ -18,12 +18,14 @@ User query
   → Gemini generates a personalised recommendation explanation
 ```
 
+Embeddings are vectors — arrays of numbers that represent the *meaning* of a piece of text. Two texts with similar meaning will produce similar vectors. The `match_documents` function in Supabase finds whichever stored movie vectors are closest to the query vector, using cosine similarity.
+
 ---
 
 ## Prerequisites
 
 - Node.js 20+
-- A [Supabase](https://supabase.com) project with pgvector enabled
+- A [Supabase](https://supabase.com) project (pgvector is enabled by default)
 - A [Gemini API key](https://aistudio.google.com)
 
 ---
@@ -64,19 +66,38 @@ Where to find them:
 Go to your Supabase project → **SQL Editor**, paste the contents of `supabase/setup.sql` and click **Run**.
 
 This creates:
-- The `documents` table (stores movie text + embeddings)
-- Row Level Security (public can read, only the server can write)
-- The `match_documents` function (cosine similarity search)
+- The `documents` table (id, content, title, year, genre, runtime, embedding)
+- Row Level Security — public can read, only the server secret key can write
+- The `match_documents` function — takes a query vector, returns the closest movies
+
+You only need to do this once per Supabase project.
 
 ### 4. Seed the database
 
-Embed all 105 movies and insert them into Supabase:
+This step loads all 105 movies into Supabase with their embeddings.
+
+**First time — generate and save embeddings (takes 5–7 min):**
+
+```bash
+npm run seed:generate
+```
+
+This calls the Gemini API to embed each movie, saves the vectors to
+`data/movies-with-embeddings.json`, then inserts everything into Supabase.
+The cache file is saved locally so you never need to call the API again.
+
+**Every time after — use the cache (takes ~5 seconds):**
 
 ```bash
 npm run seed
 ```
 
-This reads `data/movies.json`, calls Gemini to generate a vector for each movie, and inserts the rows. Takes about 1–2 minutes. Safe to re-run — it clears existing rows first.
+Reads the local cache and inserts into Supabase. No API calls, no waiting.
+Safe to re-run — it clears existing rows before inserting.
+
+> **Note on rate limits:** The Gemini free tier allows ~100 texts per minute.
+> The seed script handles this automatically — if it hits the limit it waits
+> and retries. Just leave it running.
 
 ### 5. Start the app
 
@@ -93,14 +114,16 @@ Open [http://localhost:3000](http://localhost:3000).
 ```
 movie-recommender/
 ├── data/
-│   └── movies.json          # 105 movies with title, year, genre, runtime, overview
+│   ├── movies.json                    # 105 movies: title, year, genre, runtime, overview
+│   └── movies-with-embeddings.json    # generated cache — gitignored, stays local
 ├── src/
-│   ├── seed.ts              # one-time script: embed movies and insert into Supabase
-│   └── ...                  # app code (Next.js pages / API routes)
+│   ├── embed.ts                       # calls Gemini to turn text into vectors
+│   ├── seed.ts                        # loads movies, embeds, inserts into Supabase
+│   └── ...                            # app code (Next.js pages / API routes)
 ├── supabase/
-│   └── setup.sql            # database schema — run once in Supabase SQL Editor
-├── .env                     # your keys (gitignored)
-├── .env.example             # template for teammates
+│   └── setup.sql                      # database schema — run once in SQL Editor
+├── .env                               # your keys (gitignored)
+├── .env.example                       # template for teammates
 └── README.md
 ```
 
@@ -108,17 +131,23 @@ movie-recommender/
 
 ## Shared team setup
 
-The team uses **one shared Supabase project**. Only one person needs to run the SQL setup and the seed script. Everyone else just needs the same `.env` values.
+The team uses **one shared Supabase project**. Only one person needs to run the SQL setup and `seed:generate`. Everyone else just needs the same `.env` values.
 
-If you are a teammate joining the project:
+**If you are a teammate joining the project:**
+
 1. Get the `.env` values from the person who set up Supabase
 2. Run `npm install`
-3. Run `npm run dev` — no seeding needed, the data is already in the shared database
+3. Run `npm run seed` — reads the local cache and seeds the shared database in seconds
+4. Run `npm run dev`
+
+> If you do not have `data/movies-with-embeddings.json` yet, ask a teammate for it
+> or run `npm run seed:generate` yourself (needs a Gemini API key and ~7 min).
 
 ---
 
 ## Notes
 
-- Movies are embedded using `genre + overview` text so mood words like *"heartbreaking"* or *"hilarious"* carry weight in the search
-- `runtime` is stored as a column so you can filter by length (e.g. under 120 minutes)
-- The `SUPABASE_SECRET_KEY` is used only server-side for writing. Never expose it to the browser
+- **Why `genre + overview` for embeddings?** The mood lives in the overview — words like *"heartbreaking"*, *"hilarious"*, *"slow-burn"*. Genre adds a coarse signal. Year and runtime are stored as columns for filtering but not embedded.
+- **`runtime` as a column** means you can later filter by length, e.g. `where runtime < 120`.
+- **`SUPABASE_SECRET_KEY`** bypasses Row Level Security and must only ever be used server-side (in API routes or scripts). Never send it to the browser.
+- **`NEXT_PUBLIC_` prefix** is a Next.js convention — those variables are bundled into the browser bundle. Safe for the publishable key, not for the secret key.
