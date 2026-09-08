@@ -1,23 +1,5 @@
-import "dotenv/config";
-import { createClient } from "@supabase/supabase-js";
-import ws from "ws";
 import { embedQuery } from "./query";
-
-function requireEnv(name: string): string {
-	const value = process.env[name];
-	if (!value || value.trim().length === 0) {
-		throw new Error(
-			`Missing environment variable: ${name}. Fill in .env before running this script.`
-		);
-	}
-	return value;
-}
-
-const supabase = createClient(
-	requireEnv("NEXT_PUBLIC_SUPABASE_URL"),
-	requireEnv("SUPABASE_SECRET_KEY"),
-	{ realtime: { transport: ws } }
-);
+import { searchDocuments } from "./search";
 
 async function main() {
 	const query = process.argv[2] ?? "A funny romantic movie about relationships";
@@ -26,14 +8,10 @@ async function main() {
 	const embedding = await embedQuery(query);
 	console.log(`Embedding generated: ${embedding.length} dimensions`);
 
-	const { data, error } = await supabase.rpc("match_documents", {
-		query_embedding: embedding,
-		match_count: 5,
-	});
-	if (error) throw new Error(`Search failed: ${error.message}`);
+	const movies = await searchDocuments(embedding, 5);
 
 	console.log("\nTop matches:");
-	for (const movie of data) {
+	for (const movie of movies) {
 		console.log(`- ${movie.title} (${movie.year}) — similarity ${movie.similarity.toFixed(3)}`);
 	}
 }
