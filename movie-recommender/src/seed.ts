@@ -20,8 +20,7 @@ async function seed() {
 
 	// Build the text to embed: genre gives a coarse signal,
 	// overview carries mood words like "heartbreaking" or "hilarious"
-	const texts = movies.map((m) => `${m.genre}. ${m.overview}`);
-
+	const texts = movies.map((m) => `${m.title}. ${m.genre}. ${m.overview}`);
 	// Embed in small batches with a pause between each to stay within
 	// the free-tier rate limit (quota per minute)
 	const BATCH_SIZE = 10;
