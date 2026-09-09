@@ -2,17 +2,29 @@
   "dependencies": {
     "@google/genai": "^1.20.0",
     "@supabase/supabase-js": "^2.58.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "ws": "^8.21.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "@types/node": "^24.5.2",
-    "@types/ws": "^8.18.1"
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11"
   },
   "scripts": {
     "seed": "tsx src/seed.ts",
-    "test:search": "tsx src/test-search.ts"
+    "test:search": "tsx src/test-search.ts",
+    "dev:api": "tsx src/api-server.ts",
+    "dev:web": "vite"
   }
 }
