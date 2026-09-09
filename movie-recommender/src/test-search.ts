@@ -1,22 +1,21 @@
-import { embedQuery } from "./query";
-import { searchDocuments } from "./search";
+import { searchMovies } from "./searchMovies";
 
 async function main() {
-	const query = process.argv[2] ?? "A funny romantic movie about relationships";
-	console.log(`Query: "${query}"`);
+	const movies = await searchMovies(
+		"A funny romantic movie about relationships",
+		5
+	);
 
-	const embedding = await embedQuery(query);
-	console.log(`Embedding generated: ${embedding.length} dimensions`);
+	console.log("\nsearchMovies results:");
 
-	const movies = await searchDocuments(embedding, 5);
-
-	console.log("\nTop matches:");
 	for (const movie of movies) {
-		console.log(`- ${movie.title} (${movie.year}) — similarity ${movie.similarity.toFixed(3)}`);
+		console.log(
+			`- id: ${movie.id} | similarity: ${movie.similarity.toFixed(3)} | content: ${movie.content}`
+		);
 	}
 }
 
 main().catch((err) => {
-	console.error(err instanceof Error ? err.message : err);
+	console.error(err);
 	process.exit(1);
 });
