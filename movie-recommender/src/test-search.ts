@@ -7,12 +7,7 @@ async function main() {
 	);
 
 	console.log("\nsearchMovies results:");
-
-	for (const movie of movies) {
-		console.log(
-			`- id: ${movie.id} | similarity: ${movie.similarity.toFixed(3)} | content: ${movie.content}`
-		);
-	}
+	console.log(movies);
 }
 
 main().catch((err) => {

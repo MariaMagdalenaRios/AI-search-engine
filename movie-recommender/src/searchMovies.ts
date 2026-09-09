@@ -5,6 +5,10 @@ import { supabase } from "./supabase";
 type MovieSearchResult = {
 	id: number;
 	content: string;
+	title: string;
+	year: number;
+	genre: string;
+	runtime: number;
 	similarity: number;
 };
 
@@ -35,14 +39,9 @@ export async function searchMovies(
 			throw new Error(`Supabase search failed: ${error.message}`);
 		}
 
-		return (data ?? []).map((movie: MovieSearchResult) => ({
-	id: movie.id,
-	content: movie.content,
-	similarity: movie.similarity,
-}));
+		return data ?? [];
 	} catch (error) {
 		console.error("searchMovies failed:", error);
-
 		throw new Error("Could not search for movies.");
 	}
 }
