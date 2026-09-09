@@ -1,9 +1,7 @@
-import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { createClient } from "@supabase/supabase-js";
-import ws from "ws";
 import { embedTexts } from "./embed";
+import { supabase } from "./supabase";
 
 type Movie = {
 	title: string;
@@ -12,22 +10,6 @@ type Movie = {
 	runtime: number;
 	overview: string;
 };
-
-function requireEnv(name: string): string {
-	const value = process.env[name];
-	if (!value || value.trim().length === 0) {
-		throw new Error(
-			`Missing environment variable: ${name}. Fill in .env before running the seed script.`
-		);
-	}
-	return value;
-}
-
-const supabase = createClient(
-	requireEnv("NEXT_PUBLIC_SUPABASE_URL"),
-	requireEnv("SUPABASE_SECRET_KEY"),
-	{ realtime: { transport: ws } }
-);
 
 async function seed() {
 	const movies: Movie[] = JSON.parse(
