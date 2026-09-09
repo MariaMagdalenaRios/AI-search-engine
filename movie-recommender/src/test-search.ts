@@ -1,19 +1,46 @@
 import { searchMovies } from "./searchMovies";
 
+type TestCase = {
+  label: string;
+  query: string;
+};
+
 async function main() {
-  const query =
-    process.argv[2] ?? "A funny romantic movie about relationships";
+  const customQuery = process.argv[2];
+  const testCases: TestCase[] = customQuery
+    ? [{ label: "Custom query", query: customQuery }]
+    : [
+      {
+        label: "Thriller",
+        query: "a tense thriller with twists, suspense, and danger",
+      },
+      {
+        label: "Space adventure",
+        query: "an exciting space adventure with aliens and exploration",
+      },
+      {
+        label: "Uplifting",
+        query: "an uplifting story about hope, friendship, and growth",
+      },
+      {
+        label: "Romantic comedy",
+        query: "a funny romantic movie about relationships",
+      },
+    ];
 
-  console.log(`\nQuery: "${query}"`);
+  for (const testCase of testCases) {
+    console.log(`\n=== ${testCase.label} ===`);
+    console.log(`Query: "${testCase.query}"`);
 
-  const movies = await searchMovies(query, 5);
+    const movies = await searchMovies(testCase.query, 5);
 
-  console.log("\nTop matches:");
+    console.log("Top matches:");
 
-  for (const movie of movies) {
-    console.log(
-      `- ${movie.title} (${movie.year}) — ${movie.genre} — similarity ${movie.similarity.toFixed(3)}`
-    );
+    for (const movie of movies) {
+      console.log(
+        `- ${movie.title} (${movie.year}) — ${movie.genre} — similarity ${movie.similarity.toFixed(3)}`
+      );
+    }
   }
 }
 

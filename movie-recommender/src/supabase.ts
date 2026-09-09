@@ -1,6 +1,5 @@
 import "dotenv/config";
 import { createClient } from "@supabase/supabase-js";
-import ws from "ws";
 
 function requireEnv(name: string): string {
 	const value = process.env[name];
@@ -14,6 +13,5 @@ function requireEnv(name: string): string {
 
 export const supabase = createClient(
 	requireEnv("NEXT_PUBLIC_SUPABASE_URL"),
-	requireEnv("SUPABASE_SECRET_KEY"),
-	{ realtime: { transport: ws } }
+	requireEnv("SUPABASE_SECRET_KEY")
 );

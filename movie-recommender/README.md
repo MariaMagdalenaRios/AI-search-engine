@@ -4,7 +4,7 @@ AI-powered movie recommendations using semantic search.
 
 The user describes what they feel like watching in natural language — for example *"something funny, emotional and romantic, but not too long"* — and the app finds movies that match the mood.
 
-**Stack:** Next.js · Supabase (pgvector) · Gemini embeddings
+**Stack:** Vite · React · Supabase (pgvector) · Gemini embeddings
 
 ---
 
@@ -81,10 +81,10 @@ This reads `data/movies.json`, calls Gemini to generate a vector for each movie,
 ### 5. Start the app
 
 ```bash
-npm run dev
+npm run dev:web
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:5173](http://localhost:5173).
 
 ---
 
@@ -96,7 +96,7 @@ movie-recommender/
 │   └── movies.json          # 105 movies with title, year, genre, runtime, overview
 ├── src/
 │   ├── seed.ts              # one-time script: embed movies and insert into Supabase
-│   └── ...                  # app code (Next.js pages / API routes)
+│   └── ...                  # app code (React UI + API helpers)
 ├── supabase/
 │   └── setup.sql            # database schema — run once in Supabase SQL Editor
 ├── .env                     # your keys (gitignored)
@@ -113,7 +113,7 @@ The team uses **one shared Supabase project**. Only one person needs to run the 
 If you are a teammate joining the project:
 1. Get the `.env` values from the person who set up Supabase
 2. Run `npm install`
-3. Run `npm run dev` — no seeding needed, the data is already in the shared database
+3. Run `npm run dev:web` — no seeding needed, the data is already in the shared database
 
 ---
 
