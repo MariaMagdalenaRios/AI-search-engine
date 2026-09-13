@@ -34,31 +34,43 @@ The application converts the user's request into an embedding, searches a movie 
 
 The application uses a retrieval-augmented approach:
 
-User's natural-language request
-          ↓
-Gemini generates a query embedding
-          ↓
-Supabase / pgvector performs similarity search
-          ↓
-Top matching movies are retrieved
-          ↓
-Retrieved movie information is sent to Gemini
-          ↓
-Gemini selects ONE movie from the retrieved results
-          ↓
-Natural-language recommendation and explanation
+````markdown
+
+[ User Request ] 
+       │
+       ▼
+[ Gemini generates query embedding ]
+       │
+       ▼
+[ Supabase / pgvector similarity search ]
+       │
+       ▼
+[ Top matching movies retrieved ]
+       │
+       ▼
+[ Retrieved movies sent to Gemini ]
+       │
+       ▼
+[ Gemini selects ONE movie from results ]
+       │
+       ▼
+[ Final recommendation & explanation ]
+
+````
 
 1. Movie embeddings
 
-Each movie is converted into an embedding using Gemini.
+- Each movie is converted into an embedding using Gemini.
 
-The embedding is generated from information such as the movie's genre and overview.
+- The embedding is generated from information such as the movie's genre and overview.
 
 The embeddings use:
 
-Model: gemini-embedding-001
-Task type: RETRIEVAL_DOCUMENT
-Dimensions: 768
+- Model: gemini-embedding-001
+
+- Task type: RETRIEVAL_DOCUMENT
+
+- Dimensions: 768
 
 These vectors are stored in the Supabase documents table.
 
@@ -66,10 +78,9 @@ These vectors are stored in the Supabase documents table.
 
 When a user enters a request, the query is converted into a query embedding using:
 
-Task type: RETRIEVAL_QUERY
-Dimensions: 768
-
-Supabase then uses pgvector and cosine similarity to find the most semantically similar movies.
+- Task type: RETRIEVAL_QUERY
+- Dimensions: 768
+- Supabase then uses pgvector and cosine similarity to find the most semantically similar movies.
 
 The search is performed through the match_documents database function.
 
@@ -98,33 +109,36 @@ Before running the project, install:
 ## Setup
 
 1. Clone the repository
-git clone <repo-url>
-cd movie-recommender
+git clone <repo-url>cd movie-recommender
 2. Install dependencies
 npm install
 3. Configure environment variables
-
+   
 Copy the example environment file:
 
-cp .env.example .env
+- cp .env.example .env
 
 Add your own credentials to .env:
 
-NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
-SUPABASE_SECRET_KEY=your_supabase_secret_key
-GEMINI_API_KEY=your_gemini_api_key
+- NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+
+- SUPABASE_SECRET_KEY=your_supabase_secret_key
+
+- GEMINI_API_KEY=your_gemini_api_key
 
 Never commit .env or expose secret keys in frontend code.
 
-Where to find the keys
+## Database Setup
 
-Supabase
+### Where to find the keys
+
+#### Supabase
 
 Go to your Supabase project and open:
 
 Settings → API Keys
 
-Gemini
+#### Gemini
 
 Create an API key through Google AI Studio.
 
@@ -148,18 +162,20 @@ The database uses pgvector for vector similarity search.
 
 ## Seed the Database
 
-The project contains 105 movies in:
+#### The project contains 105 movies in:
 
 data/movies.json
 
-Run:
+#### Run:
 
 npm run seed
 
-The seed script:
+#### The seed script:
 
 Reads the movie data.
+
 Creates embeddings using Gemini.
+
 Stores the movie information and embeddings in Supabase.
 
 The seed operation can take a little while because it makes embedding requests to Gemini.
@@ -174,10 +190,11 @@ You need two terminal windows.
 
 Terminal 1 — Start the API server
 npm run dev:api
+
 Terminal 2 — Start the frontend
 npm run dev:web
 
-Vite will display the local frontend address in the terminal, normally:
+#### Vite will display the local frontend address in the terminal, normally:
 
 http://localhost:5173
 
@@ -185,12 +202,17 @@ Open that address in your browser.
 
 ## Available Scripts
 
-Command	Description
-npm install	Install project dependencies
-npm run seed	Generate embeddings and seed the movie database
-npm run test:search	Test semantic search from the command line
-npm run dev:api	Start the Express API server
-npm run dev:web	Start the Vite development server
+Command = Description
+
+npm install  =	Install project dependencies
+
+npm run seed =	Generate embeddings and seed the movie database
+
+npm run test:search = Test semantic search from the command line
+
+npm run dev:api =	Start the Express API server
+
+npm run dev:web =	Start the Vite development server
 
 ## Testing Semantic Search
 
@@ -223,6 +245,7 @@ Example results include:
 These tests demonstrate that the search can identify movies based on meaning, mood and themes rather than requiring exact keywords.
 
 ## AI Reflection
+
 1. Which new AI technology or library did we identify and how did we apply it?
 
 We used Google's Gemini API for two different AI tasks.
@@ -311,51 +334,55 @@ The project also showed that AI services can occasionally fail because of tempor
 
 ## Project Structure
 
+```files
 movie-recommender/
 ├── data/
-│   └── movies.json              # Movie dataset
-│
+│   └── movies.json          # Filmdataset (105 filmer)
 ├── src/
-│   ├── App.tsx                  # React frontend
-│   ├── main.tsx                 # React entry point
-│   ├── api-server.ts            # Express API server
-│   ├── query.ts
-│   ├── search.ts 
-│   ├── searchMovies.ts          # Semantic movie search
-│   ├── recommend.ts             # Gemini recommendation logic
-│   ├── embed.ts                 # Gemini embedding helper
-│   ├── seed.ts                  # Database seeding
-│   ├── test-search.ts           # Command-line search testing
-│   └── supabase.ts              # Supabase client
-│
+│   ├── App.tsx              # React frontend
+│   ├── main.tsx             # React entry point
+│   ├── api-server.ts        # Express API-server
+│   ├── query.ts             # Databasfrågor
+│   ├── search.ts            # Sökfunktioner
+│   ├── searchMovies.ts      # Semantisk sökning
+│   ├── recommend.ts         # Gemini rekommendationslogik
+│   ├── embed.ts             # Gemini embedding-integrering
+│   ├── seed.ts              # Databas-seeding
+│   ├── test-search.ts       # Test av sökning i CLI
+│   └── supabase.ts          # Supabase klientkonfiguration
 ├── supabase/
-│   └── setup.sql                # Database schema and RPC function
-│
-├── .env.example                 # Environment variable template
+│   └── setup.sql            # Databasschema & vector search RPC
+├── .env.example             # Mall för miljövariabler
 ├── .gitignore
-├── index.html                   # Vite HTML entry point
+├── index.html               # Vite HTML-startpunkt
 ├── package.json
 ├── tsconfig.json
-├── vite.config.ts
-└── README.md
+└── vite.config.ts
+```
 
 ## Team Setup
 
-Each team member uses their own Supabase project and database.
+1. Each team member uses their own Supabase project and database.
 
-After cloning the repository, each team member should:
+2. After cloning the repository, each team member should:
 
-Create a Supabase project.
-Enable pgvector if necessary.
-Run supabase/setup.sql in the Supabase SQL Editor.
-Create their own .env file using .env.example.
-Run the seed script to populate their own database.
+3. Create a Supabase project.
+
+4. Enable pgvector if necessary.
+
+5. Run supabase/setup.sql in the Supabase SQL Editor.
+
+6. Create their own .env file using .env.example.
+
+7. Run the seed script to populate their own database.
+
 npm install
+
 npm run seed
 
 The seed script creates embeddings for the 105 movies and stores them in the team member's own Supabase database.
 
-To run the application:
+#### To run the application:
 
 Terminal 1 — API server:
 
@@ -368,18 +395,25 @@ npm run dev:web
 This setup means that team members do not need access to a shared database, and each developer can independently run and test the complete application.
 
 The main AI pipeline is:
+````markdown
 
 Natural language
+
       ↓
 Gemini embeddings
+
       ↓
 Supabase + pgvector
+
       ↓
 Semantic retrieval
+
       ↓
 Gemini LLM
+
       ↓
 Movie recommendation
+````
 
 The project also demonstrates an important practical limitation of AI-based search: retrieved results can be semantically related without perfectly satisfying every constraint in the user's request.
 
