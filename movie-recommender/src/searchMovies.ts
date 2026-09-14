@@ -21,6 +21,7 @@ export async function searchMovies(
 			throw new Error("Search query cannot be empty.");
 		}
 
+		
 		const [queryEmbedding] = await embedTexts([query], {
 			taskType: "RETRIEVAL_QUERY",
 			outputDimensionality: 768,
@@ -30,6 +31,8 @@ export async function searchMovies(
 			throw new Error("Could not generate query embedding.");
 		}
 
+		// use embedding to search the Supabase documents table
+		// via the match_documents() RPC, limited to the top `k` results.
 		const { data, error } = await supabase.rpc("match_documents", {
 			query_embedding: queryEmbedding,
 			match_count: k,
@@ -39,7 +42,7 @@ export async function searchMovies(
 			throw new Error(`Supabase search failed: ${error.message}`);
 		}
 
-		return data ?? [];
+		return data ?? []; // matched movie records, no Supabase/API error occurred
 	} catch (error) {
 		console.error("searchMovies failed:", error);
 		throw new Error("Could not search for movies.");
